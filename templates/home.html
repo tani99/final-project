@@ -1,0 +1,65 @@
+{% extends "bootstrap/base.html" %}
+
+<head>
+    {% block head %}
+{#        {% block title %}This is an example page{% endblock %}#}
+        {% block styles %}
+            {{ super() }}
+            <link rel="stylesheet"
+                  href="{{ url_for('static', filename='css/styles.css') }}">
+        {% endblock %}
+
+        {% block navbar %}
+            <div class="navbar navbar-fixed-top">
+                {#    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">#}
+                {{ nav.mynavbar.render() }}
+                {#    </nav>#}
+            </div>
+        {% endblock %}
+    {% endblock %}
+</head>
+
+<body>
+
+{% block content %}
+
+    <main role="main" class="container">
+
+        <div class="starter-template">
+            <h1>Welcome to our NLP note generator</h1>
+            <p class="lead">Please paste your text in the box and generate your summarised notes!</p>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col" style="background-color:lavender;">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Enter Text</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="col">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Summarise</button>
+                    </div>
+                    <br>
+                    <div class="col" style="background-color:lavenderblush;">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Summary</label>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac turpis egestas. Purus in mollis nunc sed id semper. Amet massa vitae tortor condimentum lacinia. Vel pharetra vel turpis nunc eget. At elementum eu facilisis sed odio morbi quis commodo odio. Viverra orci sagittis eu volutpat odio. Dictumst quisque sagittis purus sit amet. Lorem sed risus ultricies tristique nulla aliquet enim tortor. Ut tortor pretium viverra suspendisse. Sit amet risus nullam eget felis eget. Enim lobortis scelerisque fermentum dui faucibus in. Non odio euismod lacinia at quis.
+
+Mauris sit amet massa vitae tortor. Amet risus nullam eget felis eget nunc lobortis mattis aliquam. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Risus sed vulputate odio ut enim blandit. Sit amet purus gravida quis blandit turpis cursus. Risus in hendrerit gravida rutrum quisque non. Lobortis scelerisque fermentum dui faucibus in ornare quam. Nunc mattis enim ut tellus elementum sagittis vitae et. Elit pellentesque habitant morbi tristique. Pulvinar mattis nunc sed blandit libero. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Consectetur purus ut faucibus pulvinar elementum integer. Dui ut ornare lectus sit. Elit ut aliquam purus sit.
+
+Gravida cum sociis natoque penatibus et magnis dis. Sodales neque sodales ut etiam sit amet. Faucibus purus in massa tempor nec. Leo vel fringilla est ullamcorper. Amet est placerat in egestas erat. Volutpat est velit egestas dui id ornare arcu odio ut. Id nibh tortor id aliquet lectus proin nibh nisl condimentum. Facilisi cras fermentum odio eu feugiat pretium nibh. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Mattis enim ut tellus elementum sagittis vitae et. Enim ut sem viverra aliquet eget sit. Nullam non nisi est sit amet facilisis magna etiam. Porttitor leo a diam sollicitudin tempor id. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Orci sagittis eu volutpat odio facilisis mauris sit amet. Duis ultricies lacus sed turpis tincidunt id aliquet. Eu turpis egestas pretium aenean pharetra magna ac placerat. Scelerisque eu ultrices vitae auctor eu augue. Odio eu feugiat pretium nibh.
+
+Cursus eget nunc scelerisque viverra mauris in. Leo duis ut diam quam nulla porttitor massa id. Dictum at tempor commodo ullamcorper a. Id porta nibh venenatis cras sed felis eget. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Ut etiam sit amet nisl purus. Risus sed vulputate odio ut enim. Mauris cursus mattis molestie a iaculis at. Quis commodo odio aenean sed adipiscing diam. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Vel orci porta non pulvinar neque.
+                            </p>
+{#                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main><!-- /.container -->
+
+{% endblock %}
+</body>

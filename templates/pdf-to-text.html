@@ -1,0 +1,50 @@
+<!doctype html>
+{% extends "bootstrap/base.html" %}
+<head>
+    {% block head %}
+        {% block styles %}
+            {{ super() }}
+            <link rel="stylesheet"
+                  href="{{ url_for('static', filename='css/styles.css') }}">
+        {% endblock %}
+
+
+        {% block navbar %}
+            <div class="navbar navbar-fixed-top">
+                {#    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">#}
+                {{ nav.mynavbar.render() }}
+                {#    </nav>#}
+            </div>
+        {% endblock %}
+    {% endblock %}
+</head>
+
+<body>
+{% block content %}
+    <main role="main" class="container">
+
+        <div class="starter-template">
+            <title>Upload new File</title>
+            <h1>Upload new File</h1>
+
+            <form action="" method=post enctype=multipart/form-data>
+                <div class="form-group">
+                    <div class="container-fluid">
+
+                        <input type="file" class="file" required>
+
+                    </div>
+                    <input type=submit value="Get .txt file"
+                           onclick="document.getElementById('img-load').style.display = 'center' ;">
+                </div>
+
+            </form>
+            <div id="img-load" style="display: none">
+                <img src="https://media4.giphy.com/media/hL9q5k9dk9l0wGd4e0/giphy.gif?cid=ecf05e478chiuzdadsle1vq53vjx26162dsr1b0viiu8h0ex&rid=giphy.gif&ct=g"
+                     alt="loading"/>
+            </div>
+        </div>
+
+    </main><!-- /.container -->
+{% endblock %}
+</body>

@@ -4,3 +4,7 @@ itsdangerous==2.0.1
 Jinja2==3.0.1
 MarkupSafe==2.0.1
 Werkzeug==2.0.1
+
+pytesseract~=0.3.7
+Pillow~=8.2.0
+pdf2image~=1.15.1
